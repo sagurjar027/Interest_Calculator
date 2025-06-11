@@ -4,10 +4,6 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 
-# Make emoji
-money_emoji = "💰"
-interest_emoji = "📈"
-
 
 # streamlit app for Interest and amount of money :...
 st.set_page_config(
@@ -15,7 +11,14 @@ st.set_page_config(
     page_icon="smart.jpg"
 )
 st.title("Interest 📈 and Amount of 💰 Money Analysis")
-
+# adding header and colors to my name 
+st.markdown(
+    """
+    <p1 style='text-align: center; color: #4CAF50;'>
+        Created by Sahil Kasana    
+    </p1>
+    """,
+    unsafe_allow_html=True)
 # adding description
 st.markdown("""
  welcome to the Interest and Amount of Money Analysis app!
@@ -146,23 +149,29 @@ if st.button("Show detailed analysis"):
     plt.axis('equal')  
     st.pyplot(plt)
 
-
-
-
-# Add a footer
+# note footer should be vivible in both light and dark mode
 st.markdown("""
     <style>
-        footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: #f1f1f1;
-            text-align: center;
+        body {
+            background-color: #F5F5F5;
+        }
+        .stButton>button {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
         }
     </style>
-    <footer>
-        <p>Developed by Sahil Kasana</p>
-    </footer>
 """, unsafe_allow_html=True)
+# Add a footer and footer should be visible all the time
+st.markdown(
+    """
+
+
+
+    <div style='background-color: #222222; color: #FFFFFF; padding: 15px; text-align: center;'>
+        © 2025 Smart Bill Generator. All rights reserved.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
