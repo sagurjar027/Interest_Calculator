@@ -163,11 +163,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 # Add a footer and footer should be visible all the time
-st.markdown(
-    """
-
-
-
+st.markdown("""
     <div style='background-color: #222222; color: #FFFFFF; padding: 15px; text-align: center;'>
         © 2025 Smart Bill Generator. All rights reserved.
     </div>
